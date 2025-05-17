@@ -4,75 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neha's Family Tree</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-sans text-gray-800">
-    <div class="container mx-auto p-4">
-        <header class="text-center py-8">
-            <h1 class="text-5xl font-bold text-pink-600 animate-bounce">Neha's Family Tree 🌳</h1>
-            <p class="text-xl mt-4 text-purple-700">A Beautiful Journey Through Your Family!</p>
-        </header>
+<body>
+    <header class="header">
+        <h1>Neha's Family Tree 🌳</h1>
+        <p>A Beautiful Journey Through Your Family!</p>
+    </header>
 
-        <section class="my-12 flex justify-center">
-            <div id="family-tree" class="relative w-64 h-80">
-                <!-- Family Member Card -->
-                <div id="member-card" class="member-card absolute w-64 h-80 bg-white rounded-lg shadow-lg transition-transform duration-500">
-                    <img id="member-img" src="papa.jpg" alt="Family Member" class="w-48 h-48 rounded-full mx-auto mt-4 border-4 border-pink-300">
-                    <p id="member-name" class="text-center mt-4 text-lg font-semibold text-gray-700">Papa</p>
-                </div>
-            </div>
-        </section>
+    <section id="family-tree" class="family-tree">
+        <div id="member-card" class="member-card">
+            <img id="member-img" src="papa.jpg" alt="Papa">
+            <h2 id="member-name">Papa</h2>
+            <div class="click-indicator">Click Here ↓</div>
+        </div>
+    </section>
 
-        <!-- Family Tree Display -->
-        <section id="full-tree" class="my-12 hidden">
-            <h2 class="text-3xl font-semibold text-center text-indigo-600 mb-8">Our Happy Family! 🥰</h2>
-            <div class="flex flex-col items-center">
-                <!-- Parents -->
-                <div class="flex space-x-4 mb-8">
-                    <div class="family-node bg-yellow-100 p-4 rounded-lg shadow-md">
-                        <img src="papa.jpg" alt="Papa" class="w-24 h-24 rounded-full mx-auto">
-                        <p class="text-center mt-2 font-bold">Papa- vasure</p>
-                    </div>
-                    <div class="family-node bg-yellow-100 p-4 rounded-lg shadow-md">
-                        <img src="mummy.jpg" alt="Mummy" class="w-24 h-24 rounded-full mx-auto">
-                        <p class="text-center mt-2 font-bold">Mummy</p>
-                    </div>
-                </div>
-                <!-- Children -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div class="family-node bg-green-100 p-4 rounded-lg shadow-md">
-                        <img src="elder-son.jpg" alt="Elder Son" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Elder Son</p>
-                    </div>
-                    <div class="family-node bg-green-100 p-4 rounded-lg shadow-md">
-                        <img src="sons-wife.jpg" alt="Son's Wife" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Son's Wife</p>
-                    </div>
-                    <div class="family-node bg-green-100 p-4 rounded-lg shadow-md">
-                        <img src="elder-daughter.jpg" alt="Elder Daughter" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Elder Daughter</p>
-                    </div>
-                    <div class="family-node bg-green-100 p-4 rounded-lg shadow-md">
-                        <img src="daughters-husband.jpg" alt="Daughter's Husband" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Daughter's Husband</p>
-                    </div>
-                </div>
-                <!-- Younger Daughters -->
-                <div class="flex space-x-4 mt-8">
-                    <div class="family-node bg-pink-100 p-4 rounded-lg shadow-md">
-                        <img src="younger-daughter1.jpg" alt="Younger Daughter 1" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Younger Daughter 1</p>
-                    </div>
-                    <div class="family-node bg-pink-100 p-4 rounded-lg shadow-md">
-                        <img src="younger-daughter2.jpg" alt="Younger Daughter 2" class="w-20 h-20 rounded-full mx-auto">
-                        <p class="text-center mt-2">Younger Daughter 2</p>
-                    </div>
-                </div>
+    <section id="full-tree" class="full-tree hidden">
+        <h2>Our Happy Family! 🥰</h2>
+        <div class="family-grid">
+            <div class="family-node">
+                <img src="papa.jpg" alt="Papa">
+                <p>Papa</p>
             </div>
-            <p class="text-2xl text-center mt-8 text-purple-700 font-semibold">Happy Family Forever! 💖</p>
-        </section>
-    </div>
+            <div class="family-node">
+                <img src="mummy.jpg" alt="Mummy">
+                <p>Mummy</p>
+            </div>
+            <div class="family-node">
+                <img src="elder-son.jpg" alt="Elder Son">
+                <p>Bhiya-jitendra</p>
+            </div>
+            <div class="family-node">
+                <img src="sons-wife.jpg" alt="Son's Wife">
+                <p>Bhabhi-Sapna</p>
+            </div>
+            <div class="family-node">
+                <img src="elder-daughter.jpg" alt="Elder Daughter">
+                <p>Didi-dipika</p>
+            </div>
+            <div class="family-node">
+                <img src="daughters-husband.jpg" alt="Daughter's Husband">
+                <p>Jiju-Sandeep</p>
+            </div>
+            <div class="family-node">
+                <img src="younger-daughter1.jpg" alt="Younger Daughter 1">
+                <p>Choti bahan-arpita aka kalu</p>
+            </div>
+            <div class="family-node">
+                <img src="younger-daughter2.jpg" alt="Younger Daughter 2">
+                <p>it's me neha</p>
+            </div>
+        </div>
+        <p>Happy Family Forever! 💖</p>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Neha's Family Tree. All Rights Reserved.</p>
+        <p>Created by Bunny</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
