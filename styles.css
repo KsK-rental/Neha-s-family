@@ -1,0 +1,33 @@
+body {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    overflow-x: hidden;
+}
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.member-card {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.member-card.slide-out {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.member-card.slide-in {
+    transform: translateX(0);
+    opacity: 1;
+}
+.member-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 15px #ff6f61;
+    cursor: pointer;
+}
+.family-node {
+    transition: transform 0.3s ease;
+}
+.family-node:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
